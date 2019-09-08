@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -208,29 +207,6 @@ public static class GameExtensions
         return false;
     }
 
-    public static void SetTimeText(this TextMeshProUGUI obj, int totalSeconds)
-    {
-        var time = new TimeSpan(0, 0, totalSeconds);
-
-        var strTime = "";
-        if ((int) time.TotalHours > 0)
-        {
-            strTime = $"{time.TotalHours:00}:{time.Minutes:00}:{time.Seconds:00}";
-        }
-        else
-        {
-            if (time.Minutes > 0)
-            {
-                strTime = $"{time.Minutes:00}:{time.Seconds:00}";
-            }
-            else
-            {
-                strTime = $"{time.Seconds:00}";
-            }
-        }
-
-        obj.SetText(strTime);
-    }
 
     #endregion
 }
