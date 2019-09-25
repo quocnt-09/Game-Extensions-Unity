@@ -13,7 +13,7 @@ public class EventBatchStatic
         this._delegate = del;
     }
 
-    public override bool Equals(object obj)
+    /*public override bool Equals(object obj)
     {
         var p = obj as EventBatchStatic;
         if (p == null)
@@ -22,7 +22,7 @@ public class EventBatchStatic
         }
 
         return target == p.target && _delegate == p._delegate;
-    }
+    }*/
 }
 
 public static class EventSystemServiceStatic
